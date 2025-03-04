@@ -1,4 +1,6 @@
 import {defineType, defineArrayMember} from 'sanity'
+import { youtubeUrlType } from './youtubeUrl'
+import { codeBlockType } from './codeBlock'
 
 /**
  * This is the schema definition for the rich text fields used for
@@ -63,5 +65,11 @@ export default defineType({
       type: 'image',
       options: {hotspot: true},
     }),
+    defineArrayMember({
+      type: codeBlockType.name
+    }),
+    defineArrayMember({
+      type: youtubeUrlType.name
+    })
   ],
 })
